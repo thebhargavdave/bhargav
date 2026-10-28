@@ -46,10 +46,13 @@ export const CPanelGuideModal: React.FC<CPanelGuideModalProps> = ({ isOpen, onCl
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>`;
 
-  const buildCommands = `# 1. Build the production bundle
+  const buildCommands = `# 1. Install dependencies (if not installed yet)
+npm install --legacy-peer-deps
+
+# 2. Build the production bundle
 npm run build
 
-# 2. Navigate to dist and zip all contents
+# 3. Navigate to dist and zip all contents
 cd dist
 zip -r ../bhargav_portfolio.zip .
 cd ..`;
